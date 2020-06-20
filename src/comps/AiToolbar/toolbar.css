@@ -1,0 +1,52 @@
+.ai-toolbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 56px;
+    box-shadow: 0px -1px 4px 2px rgba(0, 0, 0, 0.2),
+        0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 0px 5px 0px rgba(0, 0, 0, 0.12);
+    will-change: transform;
+    transition: transform 200ms linear;
+    transform: translateY(-110%);
+    z-index: 1002;
+    text-align: left;
+}
+
+.ai-toolbar.opened {
+    transform: translateY(0%);
+}
+
+.ai-toolbar.closed {
+    transform: translateY(-110%);
+}
+
+/* Toolbar Container */
+.toolbar-container {
+    -webkit-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 56px;
+    background-color: var(--primary-main, #fafafa);
+    color: var(--primary-action, #212121);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+/* Toolbar Item Xtends AiBtn */
+.toolbar-item {
+    min-width: 56px;
+    height: 56px;
+    line-height: 56px;
+}
+
+div.toolbar-item {
+    flex: 1;
+    margin-left: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 24px;
+}

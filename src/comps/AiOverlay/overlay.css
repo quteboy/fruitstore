@@ -1,0 +1,35 @@
+/*_______________ ______________________ OVERLAY */
+.ai-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-light, #e0e0e0);
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1008;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ai-overlay.opened {
+    visibility: visible;
+    opacity: 0.75;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.ai-overlay.closed {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.ai-overlay.trans {
+    opacity: 0.3 !important;
+    background-color: #fff;
+}

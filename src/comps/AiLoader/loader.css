@@ -1,0 +1,34 @@
+/*_______________ ______________________ LOADER */
+.ai-loader {
+    cursor: auto;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    display: block;
+    position: fixed;
+    top: 46%;
+    left: 46%;
+    z-index: 1011;
+}
+
+.ai-loader.opened {
+    visibility: visible;
+}
+
+.ai-loader.closed {
+    visibility: hidden;
+}
+
+.ai-spin {
+    animation: ai-spin 2s infinite linear
+}
+
+@keyframes ai-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(359deg)
+    }
+}
